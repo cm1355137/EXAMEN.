@@ -1,0 +1,93 @@
+/* Reset: quita márgenes y padding por defecto del navegador */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Selector de etiqueta: fondo gris suave y fuente de la página */
+body {
+    background: lightgrey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Selector de ID: caja que contiene toda la página, centrada */
+#container {
+    width: 1100px;
+    margin: 0px auto;
+    border: 1px solid black;
+}
+
+/* CABECERA */
+header {
+    background: red;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+    border-bottom: 3px dashed black;
+}
+
+/* MENÚ */
+nav {
+    background: lightblue;
+    height: 50px;
+    border-bottom: 1px solid black;
+}
+
+nav ul li {
+    float: left;
+    list-style: none;
+    margin: 10px;
+    line-height: 30px;
+}
+
+/* Evita que los elementos de abajo suban después de un float */
+.clearfix {
+    clear: both;
+}
+
+/* CONTENIDO */
+#content {
+    float: left;
+    width: calc(80% - 80px);
+    padding: 40px;
+    min-height: 500px;
+    background: green;
+}
+
+/* BARRA LATERAL */
+aside {
+    float: left;
+    width: calc(20% - 20px);
+    padding: 10px;
+    min-height: 500px;
+    background: orange;
+}
+
+/* ARTÍCULOS (selector de clase) */
+.article {
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.article:first-child {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.article h2 {
+    font-size: 25px;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}

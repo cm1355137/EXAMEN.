@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>CSS con Víctor Robles</title>
+
+    <!-- PARTE 1: ESTILOS CSS -->
+    <style>
+        /* Reset: quita márgenes y padding por defecto del navegador */
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /* Selector de etiqueta: fondo gris suave y fuente de la página */
+        body {
+            background: lightgrey;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Selector de ID: caja que contiene toda la página, centrada */
+        #container {
+            width: 1100px;
+            margin: 0px auto;
+            border: 1px solid black;
+        }
+
+        /* CABECERA */
+        header {
+            background: red;
+            height: 100px;
+            width: 100%;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+            border-bottom: 3px dashed black;
+        }
+
+        /* MENÚ */
+        nav {
+            background: lightblue;
+            height: 50px;
+            border-bottom: 1px solid black;
+        }
+
+        nav ul li {
+            float: left;
+            list-style: none;
+            margin: 10px;
+            line-height: 30px;
+        }
+
+        /* Evita que los elementos de abajo suban después de un float */
+        .clearfix {
+            clear: both;
+        }
+
+        /* CONTENIDO */
+        #content {
+            float: left;
+            width: calc(80% - 80px);
+            padding: 40px;
+            min-height: 500px;
+            background: green;
+        }
+
+        /* BARRA LATERAL */
+        aside {
+            float: left;
+            width: calc(20% - 20px);
+            padding: 10px;
+            min-height: 500px;
+            background: orange;
+        }
+
+        /* ARTÍCULOS (selector de clase) */
+        .article {
+            color: white;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .article:first-child {
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+
+        .article h2 {
+            font-size: 25px;
+        }
+
+        /* PIE DE PÁGINA */
+        footer {
+            background: black;
+            color: white;
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+        }
+    </style>
+</head>
+
+<!-- PARTE 2: ESTRUCTURA HTML -->
+<body>
+
+    <div id="container">
+
+        <!-- CABECERA -->
+        <header>
+            <h1>Cabecera</h1>
+        </header>
+
+        <!-- MENÚ -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html">Sobre mí</a></li>
+                <li><a href="index.html">Artículos</a></li>
+                <li><a href="index.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="clearfix"></div>
+
+        <!-- CONTENIDO -->
+        <section id="content">
+            <article class="article">
+                <h2>Título del artículo 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, voluptatem, quos. Molestiae reprehenderit nisi nulla delectus.</p>
+            </article>
+
+            <article class="article">
+                <h2>Título del artículo 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, voluptatem, quos. Molestiae reprehenderit nisi nulla delectus.</p>
+            </article>
+
+            <article class="article">
+                <h2>Título del artículo 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, voluptatem, quos. Molestiae reprehenderit nisi nulla delectus.</p>
+            </article>
+
+            <article class="article">
+                <h2>Título del artículo 4</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, voluptatem, quos. Molestiae reprehenderit nisi nulla delectus.</p>
+            </article>
+        </section>
+
+        <!-- BARRA LATERAL -->
+        <aside>
+            <h2>Barra lateral</h2>
+            <form action="#" method="get">
+                <input type="text" />
+                <input type="submit" value="Buscar" />
+            </form>
+        </aside>
+        <div class="clearfix"></div>
+
+        <!-- PIE DE PÁGINA -->
+        <footer>
+            Víctor Robles web
+        </footer>
+
+    </div>
+
+</body>
+</html>

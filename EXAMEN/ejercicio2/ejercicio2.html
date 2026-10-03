@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Aprendiendo Flexbox</title>
+
+    <!-- PARTE 1: ESTILOS CSS -->
+    <style>
+        /* Cada caja: borde, color de letra, fuente y tamaño */
+        .caja {
+            border: 1px solid #888;
+            background-color: #eee;
+            color: black;
+            font-family: "Courier New", monospace;
+            font-weight: bold;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        /* Contenedor flexible */
+        .flex-container {
+            display: flex;
+            flex-flow: row wrap;          /* dirección + salto de línea */
+            justify-content: center;      /* alinea horizontalmente */
+            align-items: center;          /* alinea verticalmente */
+            width: 80%;
+            margin: 0 auto;
+            border: 1px solid black;
+            background: #ccc;
+            padding: 20px;
+        }
+
+        /* Colores de cada caja */
+        .c1 {
+            background: lightblue;
+            order: 2;                     /* segunda posición */
+            flex-grow: 5;                 /* ocupa más ancho */
+        }
+
+        .c2 {
+            background: lightcoral;
+            order: 3;                     /* tercera posición */
+            flex-grow: 1;
+        }
+
+        .c3 {
+            background: lightgreen;
+            order: 1;                     /* primera posición */
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+<!-- PARTE 2: ESTRUCTURA HTML -->
+<body>
+
+    <h1>Aprendiendo Flexbox con Víctor Robles</h1>
+
+    <section class="flex-container">
+        <div class="caja c1">Caja 1</div>
+        <div class="caja c2">Caja 2</div>
+        <div class="caja c3">Caja 3</div>
+    </section>
+
+</body>
+</html>

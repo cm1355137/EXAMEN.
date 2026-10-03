@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Aprendiendo CSS Grid Layout</title>
+
+    <!-- PARTE 1: ESTILOS CSS -->
+    <style>
+        body {
+            background: antiquewhite;
+            text-align: center;
+        }
+
+        /* Contenedor Grid: 2 columnas y 4 filas organizadas por áreas */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: 20% 10% auto 10%;
+            grid-template-areas:
+                "cabecera cabecera"
+                "menu menu"
+                "contenido lateral"
+                "footer footer";
+            height: 650px;
+            border: 1px solid black;
+        }
+
+        /* Estilo común de cada caja */
+        .caja {
+            background: gray;
+            border: 4px solid black;
+            padding: 20px;
+        }
+
+        /* Cada caja pertenece a un área (sin comillas) */
+        .c1 {
+            grid-area: cabecera;
+            background: lightskyblue;
+        }
+
+        .c2 {
+            grid-area: menu;
+            background: lightyellow;
+        }
+
+        .c3 {
+            grid-area: contenido;
+            background: lightsalmon;
+        }
+
+        .c4 {
+            grid-area: lateral;
+            background: #6b4f43;
+        }
+
+        .c5 {
+            grid-area: footer;
+            background: lightpink;
+        }
+    </style>
+</head>
+
+<!-- PARTE 2: ESTRUCTURA HTML -->
+<body>
+
+    <h1>Aprendiendo CSS Grid Layout con Víctor Robles WEB</h1>
+
+    <div class="grid-layout">
+        <div class="caja c1">CABECERA</div>
+        <div class="caja c2">MENU</div>
+        <div class="caja c3">CONTENIDO</div>
+        <div class="caja c4">BARRA LATERAL</div>
+        <div class="caja c5">PIE PÁGINA</div>
+    </div>
+
+</body>
+</html>
